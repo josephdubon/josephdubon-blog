@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
     // fetch required data for the blog post using params.id
-    const postData = getPostData(params.id)
+    const postData = await getPostData(params.id)
 
     return {
         props: {
