@@ -24,11 +24,21 @@ export async function getStaticProps({params}) {
 
 export default function Post({postData}) {
     return <Layout>
+        {/* post metadata */}
         {postData.title}
         <br/>
         {postData.id}
         <br/>
         {postData.date}
+        <br/>
+
+        {/* post markdown->html content */}
+        <div
+            dangerouslySetInnerHTML={
+                {
+                    __html: postData.contentHtml
+                }
+            }/>
     </Layout>
 }
 
