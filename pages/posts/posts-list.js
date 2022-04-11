@@ -2,9 +2,6 @@ import Head from 'next/head'
 import Layout, {siteTitle} from '../../components/layout'
 import {Divider, FlexboxGrid, Placeholder, Row} from 'rsuite'
 import {getSortedPostsData} from '../../lib/posts'
-import utilStyles from '../../styles/utils.module.css'
-import Link from 'next/link'
-import Date from '../../components/date'
 
 const {Paragraph} = Placeholder
 
@@ -20,7 +17,7 @@ export async function getStaticProps() {
 export default function PostsHome({allPostsData}, props) {
     return (<Layout home>
         <Head>
-            <title>{siteTitle}</title>
+            <title>Posts - {siteTitle}</title>
         </Head>
 
         <FlexboxGrid justify='center'>
@@ -37,29 +34,37 @@ export default function PostsHome({allPostsData}, props) {
                     <Divider>coming soon</Divider>
                     <FlexboxGrid justify='space-around'>
 
-                        <FlexboxGrid.Item colspan={12}>
+                        <FlexboxGrid.Item colspan={10}>
                             {/* blog posts list */}
-                            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-                                <h2 className={utilStyles.headingLg}>Blog Roll</h2>
+                            {/*<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>*/}
+                            {/*    <h2 className={utilStyles.headingLg}>Blog Roll</h2>*/}
 
-                                <ul className={utilStyles.list}>
-                                    {/* loop through posts and list by date */}
-                                    {allPostsData.map(({id, date, title}) => (
-                                        <li className={utilStyles.listItem} key={id}>
-                                            <Link href={`/posts/${id}`}>
-                                                <a>{title}</a>
-                                            </Link>
-                                            <br/>
-                                            <small className={utilStyles.lightText}>
-                                                <Date dateString={date}/>
-                                            </small>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </section>
+                            {/*    <ul className={utilStyles.list}>*/}
+                            {/*        /!* loop through posts and list by date *!/*/}
+                            {/*        {allPostsData.map(({id, date, title}) => (*/}
+                            {/*            <li className={utilStyles.listItem} key={id}>*/}
+                            {/*                <Link href={`/posts/${id}`}>*/}
+                            {/*                    <a>{title}</a>*/}
+                            {/*                </Link>*/}
+                            {/*                <br/>*/}
+                            {/*                <small className={utilStyles.lightText}>*/}
+                            {/*                    <Date dateString={date}/>*/}
+                            {/*                </small>*/}
+                            {/*            </li>*/}
+                            {/*        ))}*/}
+                            {/*    </ul>*/}
+                            {/*</section>*/}
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
                         </FlexboxGrid.Item>
 
-                        <FlexboxGrid.Item colspan={12}>
+                        <FlexboxGrid.Item colspan={10}>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
                             <Paragraph style={{marginTop: 30}} graph='square'/>
                         </FlexboxGrid.Item>
                     </FlexboxGrid>
