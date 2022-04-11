@@ -18,7 +18,7 @@ export default function Home() {
             {/* Section - hello */}
             <FlexboxGrid.Item colspan={20}>
                 <Row>
-                    <Divider>hello</Divider>
+                    <Divider>Joseph Dubon</Divider>
                     <h2>My name is Joseph Adonay Dubon</h2>
                     <h4>I am a full-stack software engineer</h4>
                     <p>BUILD THE WEB. SECURE THE FUTURE. CAPTURE TODAY, SO WE WILL NOT FORGET
