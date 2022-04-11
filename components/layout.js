@@ -1,9 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Head from 'next/head'
 import NavBar from '../components/navbar'
+import {Container, Content, Divider, FlexboxGrid, Footer, Header} from 'rsuite'
 
 const name = 'Joseph Dubon'
 export const siteTitle = 'Programmer, Photographer, Musician'
