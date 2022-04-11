@@ -11,7 +11,7 @@ export default function Home() {
 
     return (<Layout home>
         <Head>
-            <title>{siteTitle}</title>
+            <title>Home - {siteTitle}</title>
         </Head>
 
         <FlexboxGrid justify='center'>
@@ -19,13 +19,11 @@ export default function Home() {
             <FlexboxGrid.Item colspan={20}>
                 <Row>
                     <Divider>Joseph Dubon</Divider>
-                    <h2>My name is Joseph Adonay Dubon</h2>
+                    <h2>Hello, my name is Joe!</h2>
                     <h4>I am a full-stack software engineer</h4>
-                    <p>BUILD THE WEB. SECURE THE FUTURE. CAPTURE TODAY, SO WE WILL NOT FORGET
-                        TOMORROW.
-                    </p>
+                    <p>I’m currently working remotely helping build startups and on the Americoders project.</p>
                     <br/>
-                    <small>website in development, thank you for your patience</small>
+                    <p>Website in development, thank you for your patience</p>
 
                     {/* Section  - modal - button */}
                     <div className='modal-container'>
