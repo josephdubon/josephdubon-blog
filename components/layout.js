@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import NavBar from '../components/navbar'
 
 const name = 'Joseph Dubon'
 export const siteTitle = 'Programmer, Photographer, Musician'
@@ -27,6 +28,8 @@ export default function Layout({children, home}) {
                 <meta name='og:title' content={siteTitle}/>
                 <meta name='twitter:card' content='summary_large_image'/>
             </Head>
+
+            <NavBar />
 
             <header className={styles.header}>
                 {/* render different size header image conditional if home or on a sub page */}
