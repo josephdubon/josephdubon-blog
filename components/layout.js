@@ -31,42 +31,8 @@ export default function Layout({children, home}) {
                 <NavBar/>
             </Header>
 
-            <header className={styles.header}>
-                {/* render different size header image conditional if home or on a sub page */}
-                {home ? (
-                    <>
-                        <Image
-                            priority
-                            src='/images/josephdubon-profile.jpg'
-                            className={utilStyles.borderCircle}
-                            height={144}
-                            width={144}
-                            alt={name}
-                        />
-                        <h1 className={utilStyles.heading2Xl}>{name}</h1>
-                    </>
-                ) : (
-                    <>
-                        <Link href='/'>
-                            <a>
-                                <Image
-                                    priority
-                                    src='/images/josephdubon-profile.jpg'
-                                    className={utilStyles.borderCircle}
-                                    height={108}
-                                    width={108}
-                                    alt={name}
-                                />
-                            </a>
-                        </Link>
-                        <h2 className={utilStyles.headingLg}>
-                            <Link href='/'>
-                                <a className={utilStyles.colorInherit}>{name}</a>
-                            </Link>
-                        </h2>
-                    </>
-                )}
-            </header>
+            {/* main child content area */}
+            <Content>{children}</Content>
 
             {/* main child content here */}
             <main>{children}</main>
