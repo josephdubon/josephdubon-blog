@@ -17,7 +17,7 @@ export default function NavBarInstance({onSelect, activeKey}) {
     })
 
     return (<>
-        <Navbar>
+        <Navbar appearance='inverse'>
             <Navbar.Brand as={NavLink} href='/'>
                 JSPH/DBN ⌘
             </Navbar.Brand>
