@@ -8,7 +8,7 @@ const {Paragraph} = Placeholder
 export default function PhotoHome({allPostsData}, props) {
     return (<Layout home>
         <Head>
-            <title>{siteTitle}</title>
+            <title>Photo - {siteTitle}</title>
         </Head>
 
         <FlexboxGrid justify='center'>
