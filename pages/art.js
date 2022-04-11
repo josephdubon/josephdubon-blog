@@ -1,7 +1,12 @@
-import Layout from '../components/layout'
+import Layout, {siteTitle} from '../components/layout'
+import Head from 'next/head'
 
 export default function ArtHome() {
     return (<Layout>
+        <Head>
+            <title>Art - {siteTitle}</title>
+        </Head>
+
         <h1>Art Home</h1>
         <p>What Is Lorem Ipsum Used for?
             Lorem ipsum is a popular form of dummy text used in the publishing industry (and later all forms of digital
