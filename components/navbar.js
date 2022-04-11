@@ -19,10 +19,13 @@ export default function NavBarInstance({onSelect, activeKey}) {
     return (<>
         <Navbar>
             <Navbar.Brand as={NavLink} href='/'>
-                JSPH/DBN
+                JSPH/DBN ⌘
             </Navbar.Brand>
-
             <Nav>
+                <Nav.Item as={NavLink} href='/about'>
+                    About
+                </Nav.Item>
+
                 <Nav.Item as={NavLink} href='/posts/posts-list'>
                     Posts
                 </Nav.Item>
@@ -31,12 +34,8 @@ export default function NavBarInstance({onSelect, activeKey}) {
                     Code
                 </Nav.Item>
 
-                <Nav.Item as={NavLink} href='/art'>
-                    Art
-                </Nav.Item>
-
-                <Nav.Item as={NavLink} href='/about'>
-                    About
+                <Nav.Item as={NavLink} href='/photo'>
+                    Photo
                 </Nav.Item>
             </Nav>
         </Navbar>
