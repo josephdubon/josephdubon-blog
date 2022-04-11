@@ -14,7 +14,7 @@ export default function CodeHome({allPostsData}, props) {
 
     return (<Layout home>
         <Head>
-            <title>{siteTitle}</title>
+            <title>Code - {siteTitle}</title>
         </Head>
 
         <FlexboxGrid justify='center'>
@@ -30,11 +30,18 @@ export default function CodeHome({allPostsData}, props) {
                     {/* Section  - about me */}
                     <Divider>coming soon</Divider>
                     <FlexboxGrid justify='space-around'>
-                        <FlexboxGrid.Item colspan={12}>
+                        <FlexboxGrid.Item colspan={10}>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
                             <Paragraph style={{marginTop: 30}} graph='square'/>
                         </FlexboxGrid.Item>
 
-                        <FlexboxGrid.Item colspan={12}>
+                        <FlexboxGrid.Item colspan={10}>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
                             <Paragraph style={{marginTop: 30}} graph='square'/>
                         </FlexboxGrid.Item>
                     </FlexboxGrid>
