@@ -12,7 +12,7 @@ export default function AboutHome({allPostsData}, props) {
 
     return (<Layout home>
         <Head>
-            <title>{siteTitle}</title>
+            <title>About - {siteTitle}</title>
         </Head>
 
         <FlexboxGrid justify='center'>
@@ -26,7 +26,7 @@ export default function AboutHome({allPostsData}, props) {
                         TOMORROW.
                     </p>
                     <br/>
-                    <small>website in development, thank you for your patience</small>
+                    <p>Website in development, thank you for your patience</p>
 
                     {/* Section  - modal - button */}
                     <div className='modal-container'>
@@ -62,7 +62,7 @@ export default function AboutHome({allPostsData}, props) {
                     {/* Section  - about me */}
                     <Divider>about me</Divider>
                     <FlexboxGrid justify='space-around'>
-                        <FlexboxGrid.Item colspan={16}>
+                        <FlexboxGrid.Item colspan={14}>
                             <h6>I started my professional career as a developer in 2012</h6>
                             <p>But I have been programming and building/breaking computers for most my life. I built my
                                 first computer from recycled and donated parts when I was in elementary school. I built
@@ -87,14 +87,14 @@ export default function AboutHome({allPostsData}, props) {
                                 implement to maintain our projects.</p>
                         </FlexboxGrid.Item>
 
-                        <FlexboxGrid.Item colspan={8}>
+                        <FlexboxGrid.Item colspan={6}>
                             <Timeline>
                                 <Timeline.Item>2012 - Wordpress Web Developer</Timeline.Item>
                                 <Timeline.Item>2015 - Jr Web Developer</Timeline.Item>
                                 <Timeline.Item>2019 - Frontend Web Developer</Timeline.Item>
                                 <Timeline.Item>2021 - Fullstack Software
                                     Engineer</Timeline.Item>
-                                <Timeline.Item>What a wonderful journey!</Timeline.Item>
+                                <Timeline.Item> 2022 - What a wonderful journey!</Timeline.Item>
                             </Timeline>
                         </FlexboxGrid.Item>
                     </FlexboxGrid>
