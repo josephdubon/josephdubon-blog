@@ -1,8 +1,9 @@
-import Layout from '../../components/layout'
+import Layout, {siteTitle} from '../../components/layout'
 import utilStyles from '../../styles/utils.module.css'
 import Link from 'next/link'
 import Date from '../../components/date'
 import {getSortedPostsData} from '../../lib/posts'
+import Head from 'next/head'
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData()
@@ -15,6 +16,10 @@ export async function getStaticProps() {
 
 export default function PostsHome({allPostsData}) {
     return (<Layout>
+        <Head>
+            <title>Posts List - {siteTitle}</title>
+        </Head>
+
         <h1>Posts Home</h1>
         <p>What Is Lorem Ipsum Used for?
             Lorem ipsum is a popular form of dummy text used in the publishing industry (and later all forms of digital
