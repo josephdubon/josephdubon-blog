@@ -1,9 +1,12 @@
+import Head from 'next/head'
 import Layout, {siteTitle} from '../../components/layout'
+import {Divider, FlexboxGrid, Placeholder, Row} from 'rsuite'
+import {getSortedPostsData} from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.css'
 import Link from 'next/link'
 import Date from '../../components/date'
-import {getSortedPostsData} from '../../lib/posts'
-import Head from 'next/head'
+
+const {Paragraph} = Placeholder
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData()
@@ -14,42 +17,54 @@ export async function getStaticProps() {
     }
 }
 
-export default function PostsHome({allPostsData}) {
-    return (<Layout>
+export default function PostsHome({allPostsData}, props) {
+    return (<Layout home>
         <Head>
-            <title>Posts List - {siteTitle}</title>
+            <title>{siteTitle}</title>
         </Head>
 
-        <h1>Posts Home</h1>
-        <p>What Is Lorem Ipsum Used for?
-            Lorem ipsum is a popular form of dummy text used in the publishing industry (and later all forms of digital
-            design) since the 16th century.
+        <FlexboxGrid justify='center'>
+            {/* Section - hello */}
+            <FlexboxGrid.Item colspan={20}>
+                <Row>
+                    <Divider>Joseph Dubon</Divider>
+                    <h2>Posts Listing</h2>
+                    <h4>You Can't Put Your Arms Around A Random Access Memory</h4>
+                    <p>Posts page is in development.</p>
+                </Row>
+                <Row>
+                    {/* Section  - about me */}
+                    <Divider>coming soon</Divider>
+                    <FlexboxGrid justify='space-around'>
 
-            Its main purpose is to help visualize the layout and style of a document without the need for actual
-            content.
+                        <FlexboxGrid.Item colspan={12}>
+                            {/* blog posts list */}
+                            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+                                <h2 className={utilStyles.headingLg}>Blog Roll</h2>
 
-            Apart from its use as placeholder text before the real content is at hand, lorem ipsum can also be used
-            after the content is available – by temporarily replacing it to separate form from meaning in a design. This
-            excercise is sometimes called greeking – not to be confused with geeking 🤓</p>
+                                <ul className={utilStyles.list}>
+                                    {/* loop through posts and list by date */}
+                                    {allPostsData.map(({id, date, title}) => (
+                                        <li className={utilStyles.listItem} key={id}>
+                                            <Link href={`/posts/${id}`}>
+                                                <a>{title}</a>
+                                            </Link>
+                                            <br/>
+                                            <small className={utilStyles.lightText}>
+                                                <Date dateString={date}/>
+                                            </small>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </section>
+                        </FlexboxGrid.Item>
 
-        {/* blog posts list */}
-        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-            <h2 className={utilStyles.headingLg}>Blog Roll</h2>
-
-            <ul className={utilStyles.list}>
-                {/* loop through posts and list by date */}
-                {allPostsData.map(({id, date, title}) => (
-                    <li className={utilStyles.listItem} key={id}>
-                        <Link href={`/posts/${id}`}>
-                            <a>{title}</a>
-                        </Link>
-                        <br/>
-                        <small className={utilStyles.lightText}>
-                            <Date dateString={date}/>
-                        </small>
-                    </li>
-                ))}
-            </ul>
-        </section>
+                        <FlexboxGrid.Item colspan={12}>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                        </FlexboxGrid.Item>
+                    </FlexboxGrid>
+                </Row>
+            </FlexboxGrid.Item>
+        </FlexboxGrid>
     </Layout>)
 }
