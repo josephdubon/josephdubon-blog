@@ -4,7 +4,7 @@ import NavBar from '../components/navbar'
 import {Container, Content, Divider, FlexboxGrid, Footer, Header} from 'rsuite'
 
 const name = 'Joseph Dubon'
-export const siteTitle = 'Programmer, Photographer, Musician'
+export const siteTitle = name + 'Full-Stack Software Engineer'
 
 export default function Layout({children, home}) {
     return (
