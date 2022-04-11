@@ -34,17 +34,25 @@ export default function Layout({children, home}) {
             {/* main child content area */}
             <Content>{children}</Content>
 
-            {/* main child content here */}
-            <main>{children}</main>
+            {/* footer area */}
+            <Footer>
+                <Divider>thanks for visiting</Divider>
+                <FlexboxGrid justify='space-around'>
+                    <FlexboxGrid.Item colspan={6}>
+                        © {new Date().getFullYear()}
+                        <Link href='/'><a>
+                            {' '} Joseph Adonay Dubon
+                        </a></Link>
+                    </FlexboxGrid.Item>
+                    <FlexboxGrid.Item colspan={6}>
+                        Built in Reno with a lot of ❤️
+                    </FlexboxGrid.Item>
+                    <FlexboxGrid.Item colspan={6}>
+                        "The moth don't care if the flame is real."
+                    </FlexboxGrid.Item>
+                </FlexboxGrid>
+            </Footer>
+        </Container>
 
-            {/* if not home render a 'back to home' link at bottom of page */}
-            {!home && (
-                <div className={styles.backToHome}>
-                    <Link href='/'>
-                        <a>← Back to home</a>
-                    </Link>
-                </div>
-            )}
-        </div>
-    )
+    </>)
 }
