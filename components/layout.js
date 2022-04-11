@@ -25,7 +25,11 @@ export default function Layout({children, home}) {
             <title>{' '}</title>
         </Head>
 
-            <NavBar />
+        <Container>
+            {/* header area */}
+            <Header>
+                <NavBar/>
+            </Header>
 
             <header className={styles.header}>
                 {/* render different size header image conditional if home or on a sub page */}
