@@ -45,7 +45,7 @@ export default function Layout({children, home}) {
                         </a></Link>
                     </FlexboxGrid.Item>
                     <FlexboxGrid.Item colspan={6}>
-                        Built in Reno with a lot of ❤️
+                        Built in Reno, NV with a lot of ❤️
                     </FlexboxGrid.Item>
                     <FlexboxGrid.Item colspan={6}>
                         "The moth don't care if the flame is real."
