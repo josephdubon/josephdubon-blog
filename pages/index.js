@@ -24,6 +24,8 @@ export default function Home() {
                     <p>BUILD THE WEB. SECURE THE FUTURE. CAPTURE TODAY, SO WE WILL NOT FORGET
                         TOMORROW.
                     </p>
+                    <br/>
+                    <small>website in development, thank you for your patience</small>
 
                     {/* Section  - modal - button */}
                     <div className='modal-container'>
