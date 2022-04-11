@@ -18,12 +18,11 @@ export default function NavBarInstance({onSelect, activeKey}) {
 
     return (<>
         <Navbar>
-            <Navbar.Brand>
-                <Link href='/'><a>JSPH/DBN</a></Link>
+            <Navbar.Brand as={NavLink} href='/'>
+                JSPH/DBN
             </Navbar.Brand>
 
             <Nav>
-
                 <Nav.Item as={NavLink} href='/posts/posts-list'>
                     Posts
                 </Nav.Item>
