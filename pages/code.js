@@ -1,22 +1,48 @@
-import Layout, {siteTitle} from '../components/layout'
 import Head from 'next/head'
+import Layout, {siteTitle} from '../components/layout'
+import {Divider, FlexboxGrid, Placeholder, Row} from 'rsuite'
+import {useState} from 'react'
 
-export default function CodeHome() {
-    return (<Layout>
+const {Paragraph} = Placeholder
+
+
+export default function CodeHome({allPostsData}, props) {
+    // use state
+    const [open, setOpen] = useState(false)
+    const handleOpen = () => setOpen(true)
+    const handleClose = () => setOpen(false)
+
+    return (<Layout home>
         <Head>
-            <title>Code - {siteTitle}</title>
+            <title>{siteTitle}</title>
         </Head>
 
-        <h1>Code Home</h1>
-        <p>What Is Lorem Ipsum Used for?
-            Lorem ipsum is a popular form of dummy text used in the publishing industry (and later all forms of digital
-            design) since the 16th century.
+        <FlexboxGrid justify='center'>
+            {/* Section - hello */}
+            <FlexboxGrid.Item colspan={20}>
+                <Row>
+                    <Divider>Joseph Dubon</Divider>
+                    <h2>Code Examples</h2>
+                    <h4>Python, Javascript, HTML, CSS, Haskell, Elisp</h4>
+                    <p>Code examples page is in development.</p>
+                </Row>
+                <Row>
+                    {/* Section  - about me */}
+                    <Divider>coming soon</Divider>
+                    <FlexboxGrid justify='space-around'>
+                        <FlexboxGrid.Item colspan={12}>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                        </FlexboxGrid.Item>
 
-            Its main purpose is to help visualize the layout and style of a document without the need for actual
-            content.
+                        <FlexboxGrid.Item colspan={12}>
+                            <Paragraph style={{marginTop: 30}} graph='square'/>
+                        </FlexboxGrid.Item>
+                    </FlexboxGrid>
+                </Row>
 
-            Apart from its use as placeholder text before the real content is at hand, lorem ipsum can also be used
-            after the content is available – by temporarily replacing it to separate form from meaning in a design. This
-            excercise is sometimes called greeking – not to be confused with geeking 🤓</p>
+            </FlexboxGrid.Item>
+
+        </FlexboxGrid>
+
     </Layout>)
 }
