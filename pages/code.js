@@ -20,8 +20,7 @@ export default function CodeHome({allPostsData}, props) {
         <FlexboxGrid justify='center'>
             {/* Section - hello */}
             <FlexboxGrid.Item colspan={20}>
-                <Row>
-                    <Divider>Joseph Dubon</Divider>
+                <Row className='rowTitle'>
                     <h2>Code Examples</h2>
                     <h4>Python, Javascript, HTML, CSS, Haskell, Elisp</h4>
                     <p>Code examples page is in development.</p>
