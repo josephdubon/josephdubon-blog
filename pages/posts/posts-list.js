@@ -23,8 +23,7 @@ export default function PostsHome({allPostsData}, props) {
         <FlexboxGrid justify='center'>
             {/* Section - hello */}
             <FlexboxGrid.Item colspan={20}>
-                <Row>
-                    <Divider>Joseph Dubon</Divider>
+                <Row className='rowTitle'>
                     <h2>Posts Listing</h2>
                     <h4>You Can't Put Your Arms Around A Random Access Memory</h4>
                     <p>Posts page is in development.</p>
