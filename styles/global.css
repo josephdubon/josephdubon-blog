@@ -1,3 +1,36 @@
-.text-center {
+.pageContextWrapper {
+    width: 100%;
+}
+
+.flexRowEvenly {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     text-align: center;
 }
+
+.rowAltColor {
+    background: #222b36;
+    color: #e8ebf0;
+}
+
+.contentContainer {
+    min-height: 60vh;
+    padding: 2.5rem 5rem;
+}
+
+.contentContainerCenter {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowTitle {
+    margin: 2.5rem 0;
+}
+
+.backToHome {
+    margin: 3rem 0 0;
+}
+
