@@ -42,12 +42,12 @@ export default function PostsHome({allPostsData}, props) {
                             {/*    <ul className={utilStyles.list}>*/}
                             {/*        /!* loop through posts and list by date *!/*/}
                             {/*        {allPostsData.map(({id, date, title}) => (*/}
-                            {/*            <li className={utilStyles.listItem} key={id}>*/}
+                            {/*            <li key={id}>*/}
                             {/*                <Link href={`/posts/${id}`}>*/}
                             {/*                    <a>{title}</a>*/}
                             {/*                </Link>*/}
                             {/*                <br/>*/}
-                            {/*                <small className={utilStyles.lightText}>*/}
+                            {/*                <small>*/}
                             {/*                    <Date dateString={date}/>*/}
                             {/*                </small>*/}
                             {/*            </li>*/}
