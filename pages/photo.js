@@ -14,8 +14,7 @@ export default function PhotoHome({allPostsData}, props) {
         <FlexboxGrid justify='center'>
             {/* Section - hello */}
             <FlexboxGrid.Item colspan={20}>
-                <Row>
-                    <Divider>Joseph Dubon</Divider>
+                <Row className='rowTitle'>
                     <h2>Photography Gallery</h2>
                     <h4>Digital, Film, Portrait, Lifestyle</h4>
                     <p>Photo gallery page is in development.</p>

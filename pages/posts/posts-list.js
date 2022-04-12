@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Layout, {siteTitle} from '../../components/layout'
 import {Divider, FlexboxGrid, Placeholder, Row} from 'rsuite'
 import {getSortedPostsData} from '../../lib/posts'
+import Link from 'next/link'
 
 const {Paragraph} = Placeholder
 
@@ -23,8 +24,7 @@ export default function PostsHome({allPostsData}, props) {
         <FlexboxGrid justify='center'>
             {/* Section - hello */}
             <FlexboxGrid.Item colspan={20}>
-                <Row>
-                    <Divider>Joseph Dubon</Divider>
+                <Row className='rowTitle'>
                     <h2>Posts Listing</h2>
                     <h4>You Can't Put Your Arms Around A Random Access Memory</h4>
                     <p>Posts page is in development.</p>
@@ -42,12 +42,12 @@ export default function PostsHome({allPostsData}, props) {
                             {/*    <ul className={utilStyles.list}>*/}
                             {/*        /!* loop through posts and list by date *!/*/}
                             {/*        {allPostsData.map(({id, date, title}) => (*/}
-                            {/*            <li className={utilStyles.listItem} key={id}>*/}
+                            {/*            <li key={id}>*/}
                             {/*                <Link href={`/posts/${id}`}>*/}
                             {/*                    <a>{title}</a>*/}
                             {/*                </Link>*/}
                             {/*                <br/>*/}
-                            {/*                <small className={utilStyles.lightText}>*/}
+                            {/*                <small>*/}
                             {/*                    <Date dateString={date}/>*/}
                             {/*                </small>*/}
                             {/*            </li>*/}

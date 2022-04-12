@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import Head from 'next/head'
-import NavBar from '../components/navbar'
-import {Container, Content, Divider, FlexboxGrid, Footer, Header} from 'rsuite'
+import NavBar from './navbar'
+import Footer from './footer'
+import {Container, Content, Header} from 'rsuite'
 
 const name = 'Joseph Dubon'
 export const siteTitle = name + 'Full-Stack Software Engineer'
@@ -35,23 +35,7 @@ export default function Layout({children, home}) {
             <Content>{children}</Content>
 
             {/* footer area */}
-            <Footer>
-                <Divider>thanks for visiting</Divider>
-                <FlexboxGrid justify='space-around'>
-                    <FlexboxGrid.Item colspan={6}>
-                        © {new Date().getFullYear()}
-                        <Link href='/'><a>
-                            {' '} Joseph Adonay Dubon
-                        </a></Link>
-                    </FlexboxGrid.Item>
-                    <FlexboxGrid.Item colspan={6}>
-                        Built in Reno, NV with a lot of ❤️
-                    </FlexboxGrid.Item>
-                    <FlexboxGrid.Item colspan={6}>
-                        "The moth don't care if the flame is real."
-                    </FlexboxGrid.Item>
-                </FlexboxGrid>
-            </Footer>
+            <Footer/>
         </Container>
 
     </>)

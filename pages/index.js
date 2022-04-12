@@ -1,64 +1,65 @@
-import {useState} from 'react'
 import Head from 'next/head'
-import {Button, ButtonToolbar, Divider, FlexboxGrid, List, Modal, Row} from 'rsuite'
+import {Button, Col, Grid, Row} from 'rsuite'
 import Layout, {siteTitle} from '../components/layout'
+import Card from '../components/card'
 
 export default function Home() {
-    // use state
-    const [open, setOpen] = useState(false)
-    const handleOpen = () => setOpen(true)
-    const handleClose = () => setOpen(false)
-
     return (<Layout home>
         <Head>
             <title>Home - {siteTitle}</title>
         </Head>
 
-        <FlexboxGrid justify='center'>
-            {/* Section - hello */}
-            <FlexboxGrid.Item colspan={20}>
-                <Row>
-                    <Divider>Joseph Dubon</Divider>
+        <Grid fluid>
+            <Row>
+                <Col className='contentContainer contentContainerCenter' xs={24}>
                     <h2>Hello, my name is Joe!</h2>
-                    <h4>I am a full-stack software engineer</h4>
-                    <p>I’m currently working remotely helping build startups and on the Americoders project.</p>
                     <br/>
-                    <p>Website in development, thank you for your patience</p>
+                    <h4>I am a full-stack software engineer.</h4>
+                    <p>I love to teach what I know and help anyone looking to get into coding or tech.</p>
+                    <br/>
+                    <p>I’m currently working remotely, for my own software company, building <br/>
+                        startups and diving into
+                        web3, blockchain development.</p>
+                </Col>
+                <Col className='contentContainer contentContainerCenter rowAltColor' xs={24}>
+                    <h2>Let's build something beautiful together.</h2>
+                    <br/>
+                    <h4>Custom Software, Websites, Web Apps, SPA's, Consultations</h4>
+                    <p>I am currently accepting entries to my project queue.</p>
+                    <br/>
+                    <a href='mailto:jd@josephdubon.com'>
+                        <Button appearance='ghost'>jd@josephdubon.com</Button>
+                    </a>
 
-                    {/* Section  - modal - button */}
-                    <div className='modal-container'>
-                        <br/>
-                        <ButtonToolbar>
-                            <Button onClick={handleOpen}> Contact Card</Button>
-                        </ButtonToolbar>
+                    <br/>
 
-                        {/* Section - modal - content */}
-                        <Modal open={open} onClose={handleClose}>
-                            <Modal.Header>
-                                <Modal.Title>Contact Card</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>
-                                <List bordered hover>
-                                    <List.Item>Name: Joseph Dubon</List.Item>
-                                    <List.Item>Title: Full-Stack Software Engineer</List.Item>
-                                    <List.Item>Email: <a
-                                        href='mailto:jd@josephdubon.com'>jd@josephdubon.com</a></List.Item>
-                                    <List.Item>Phone: <a
-                                        href='tel:(775)232-6280'>(775)232-6280</a></List.Item>
-                                </List>
-                            </Modal.Body>
-                            <Modal.Footer>
-                                <Button onClick={handleClose} appearance='primary'>
-                                    Close
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-                    </div>
+                </Col>
+            </Row>
+
+            {/* full row */}
+            <Row>
+                <Col className='contentContainerCenter rowTitle' xs={24}>
+                    <h2>Posts Listing</h2>
+                    <h4>Recently published</h4>
+                    <p>Posts page is in development.</p>
+                </Col>
+                <Row className='contentContainer'>
+                    <Col xs={24} sm={12} md={8} lg={6}>
+                        <Card title='Cool Post Coming Soon 1'/>
+                    </Col>
+                    <Col xs={24} sm={12} md={8} lg={6}>
+                        <Card title='Cool Post Coming Soon 2'/>
+                    </Col>
+                    <Col xs={24} sm={12} md={8} lg={6}>
+                        <Card title='Cool Post Coming Soon 3'/>
+                    </Col>
+                    <Col xs={24} sm={12} md={8} lg={6}>
+                        <Card title='Cool Post Coming Soon 4'/>
+                    </Col>
                 </Row>
+            </Row>
+        </Grid>
 
-            </FlexboxGrid.Item>
-
-        </FlexboxGrid>
 
     </Layout>)
 }

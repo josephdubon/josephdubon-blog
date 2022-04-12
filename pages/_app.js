@@ -8,6 +8,8 @@ import {CustomProvider} from 'rsuite'
 
 export default function App({Component, pageProps}) {
     return (<CustomProvider theme='dark'>
-        <Component {...pageProps} />
+        <div className='pageContextWrapper'>
+            <Component {...pageProps} />
+        </div>
     </CustomProvider>)
 }

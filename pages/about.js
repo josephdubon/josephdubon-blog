@@ -18,13 +18,13 @@ export default function AboutHome({allPostsData}, props) {
         <FlexboxGrid justify='center'>
             {/* Section - hello */}
             <FlexboxGrid.Item colspan={20}>
-                <Row>
-                    <Divider>Joseph Dubon</Divider>
+                <Row className='rowTitle'>
                     <h2>About Me</h2>
                     <h4>I am a full-stack software engineer</h4>
-                    <p>BUILD THE WEB. SECURE THE FUTURE. CAPTURE TODAY, SO WE WILL NOT FORGET
+                    <small>BUILD THE WEB. SECURE THE FUTURE. CAPTURE TODAY, SO WE WILL NOT FORGET
                         TOMORROW.
-                    </p>
+                    </small>
+                    <br/>
                     <br/>
                     <p>Website in development, thank you for your patience</p>
 
