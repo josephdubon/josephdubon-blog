@@ -29,7 +29,6 @@ export default function AboutHome({posts}) {
                     <h2>About</h2>
                     <h4>Software Engineer / Musician / Photographer</h4>
                     <p>Page is in development. More posts coming soon.</p>
-                    <br/>
                 </Col>
 
                 <Row>
