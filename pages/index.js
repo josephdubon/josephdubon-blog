@@ -25,7 +25,6 @@ export default function Home({posts}) {
             <Col className='contentContainerCenter rowTitle' xs={24}>
                 <Col className='contentPanel contentContainerCenter rowTitle' xs={24}>
                     <h2>Hello, my name is Joe!</h2>
-                    <br/>
                     <h4>I am a full-stack software engineer.</h4>
                     <p>I love to teach what I know and help anyone looking to get into coding or tech.</p>
                     <br/>
