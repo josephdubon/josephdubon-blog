@@ -12,7 +12,10 @@ export default function Home({posts}) {
     // filter last ten posts
     posts = posts.slice(-8)
 
-export default function Home() {
+    posts = posts.sort(function (a, b) {
+        return a - b // returns newest to oldest;change to a + b and returns oldest to newest
+    })
+
     return (<Layout home>
         <Head>
             <title>Home - {siteTitle}</title>
