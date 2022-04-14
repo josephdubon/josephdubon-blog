@@ -22,8 +22,8 @@ export default function Home({posts}) {
         </Head>
 
         <Grid fluid>
-            <Row>
-                <Col className='contentContainer contentContainerCenter' xs={24}>
+            <Col className='contentContainerCenter rowTitle' xs={24}>
+                <Col className='contentPanel contentContainerCenter rowTitle' xs={24}>
                     <h2>Hello, my name is Joe!</h2>
                     <br/>
                     <h4>I am a full-stack software engineer.</h4>
