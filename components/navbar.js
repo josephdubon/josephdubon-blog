@@ -1,8 +1,12 @@
 import Link from 'next/link'
-import {Nav, Navbar} from 'rsuite'
-import {forwardRef} from 'react'
+import {Button, List, Modal, Nav, Navbar} from 'rsuite'
+import {forwardRef, useState} from 'react'
 
 export default function NavBarInstance() {
+    // set state
+    const [open, setOpen] = useState(false)
+    const handleOpen = () => setOpen(true)
+    const handleClose = () => setOpen(false)
 
     // There are some navigation components in the rsuite component, such as Dropdown, Nav, Breadcrumb,
     // which are used in conjunction with the Link component of Next.js to use the as prop.
@@ -40,6 +44,9 @@ export default function NavBarInstance() {
                     </Nav.Item>
                 </Nav>
                 <Nav pullRight>
+                    <Nav.Item onClick={handleOpen} href='#'>
+                        Contact Card
+                    </Nav.Item>
                     <Nav.Item href='https://github.com/josephdubon'>
                         GitHub
                     </Nav.Item>
@@ -49,5 +56,27 @@ export default function NavBarInstance() {
                 </Nav>
             </section>
         </Navbar>
+
+        {/* Section - modal - content */}
+        <Modal open={open} onClose={handleClose}>
+            <Modal.Header>
+                <Modal.Title>Contact Card</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <List bordered hover>
+                    <List.Item>Name: Joseph Dubon</List.Item>
+                    <List.Item>Title: Full-Stack Software Engineer</List.Item>
+                    <List.Item>Email: <a
+                        href='mailto:jd@josephdubon.com'>jd@josephdubon.com</a></List.Item>
+                    <List.Item>Phone: <a
+                        href='tel:(775)232-6280'>(775)232-6280</a></List.Item>
+                </List>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={handleClose} appearance='primary'>
+                    Close
+                </Button>
+            </Modal.Footer>
+        </Modal>
     </>)
 }
