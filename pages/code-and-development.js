@@ -28,7 +28,7 @@ export default function Home({posts}) {
                 <Col className='rowTitle' xs={24}>
                     <h2>Code & Dev</h2>
                     <h4>Python / Javascript / HTML & CSS / Emacs Elisp</h4>
-                    <p>Code examples page is in development.</p>
+                    <p>Page is in development. More posts coming soon.</p>
                 </Col>
                 <Row>
                     {/* send message if there are no posts */}
