@@ -88,3 +88,16 @@ export default function Home({posts}) {
 
     </Layout>)
 }
+
+export function getStaticProps() {
+    const posts = postFilePaths.map((filePath) => {
+        const source = fs.readFileSync(path.join(POSTS_PATH, filePath)) //all the filenames inside ./posts
+        const {content, data} = matter(source)
+
+        return {
+            content, data, filePath,
+        }
+    })
+
+    return {props: {posts}}
+}
