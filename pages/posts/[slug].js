@@ -18,7 +18,9 @@ const components = {
     a: CustomLink, // It also works with dynamically-imported components, which is especially
     // useful for conditionally loading components for certain routes.
     // See the notes in README.md for more details.
-    TestComponent: dynamic(() => import('../../components/TestComponent')), Head,
+    TestComponent: dynamic(() => import('../../components/TestComponent')),
+    Head,
+    Layout,
 }
 
 export default function PostPage({source, frontMatter}) {
