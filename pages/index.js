@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import {Button, Col, Grid, Panel, Row} from 'rsuite'
-import Layout, {siteTitle} from '../components/layout'
+import Layout, {siteTitle} from '../components/Layout'
 import fs from 'fs'
 import path from 'path'
 import {postFilePaths, POSTS_PATH} from '../utils/mdxUtils'

@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import NavBar from './navbar'
-import Footer from './footer'
+import NavBar from './Navbar'
+import Footer from './Footer'
 import {Container, Content, Header} from 'rsuite'
 
 const name = 'Joseph Dubon'
 export const siteTitle = name + 'Full-Stack Software Engineer'
 
-export default function Layout({children, home}) {
+export default function Layout({children}) {
     return (<>
         {/* metadata */}
         <Head>
