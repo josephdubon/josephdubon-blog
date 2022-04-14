@@ -30,7 +30,7 @@ export default function Home({posts}) {
                     <p>{' '}</p>
                     <p>I’m currently working remotely building startups and diving into web3/blockchain development.</p>
                 </Col>
-                <Col className='contentContainer contentContainerCenter rowAltColor' xs={24}>
+                <Col className='contentPanel contentContainerCenter rowTitle rowAltColor' xs={24}>
                     <h2>Let's build something beautiful together.</h2>
                     <br/>
                     <h4>Custom Software, Websites, Web Apps, SPA's, Consultations</h4>
