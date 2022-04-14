@@ -1,5 +1,44 @@
+:root {
+    --wrapper-width: 1440px;
+    --alt-bg-color: #222b36;
+}
+
+
+/* global  */
 .pageContextWrapper {
-    width: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+
+.contentContainer {
+    max-width: var(--wrapper-width);
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+.contentContainerCenter {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentContainerCenterRow {
+    justify-content: center;
+}
+
+.contentPanel {
+    min-height: 60vh;
+}
+
+.mainNav {
+    max-width: var(--wrapper-width);
+    margin: 0 auto;
+}
+
+/* rows */
+.rowTitle {
+    margin: 2.5rem 0;
 }
 
 .flexRowEvenly {
@@ -10,27 +49,20 @@
 }
 
 .rowAltColor {
-    background: #222b36;
+    background: var(--alt-bg-color);
     color: #e8ebf0;
-}
-
-.contentContainer {
-    min-height: 60vh;
-    padding: 2.5rem 5rem;
-}
-
-.contentContainerCenter {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.rowTitle {
-    margin: 2.5rem 0;
 }
 
 .backToHome {
     margin: 3rem 0 0;
 }
 
+.postListCard {
+    height: 100%;
+    margin: 1rem 0;
+}
+
+.rs-footer {
+    width: 100%;
+    margin: 2.5rem auto;
+}

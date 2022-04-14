@@ -8,9 +8,9 @@ import matter from 'gray-matter'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function AboutHome({posts}) {
+export default function Home({posts}) {
     // filter tag
-    const filterTag = 'about me'
+    const filterTag = 'code & dev'
     // filter out posts
     posts = posts.filter(post => post.data.tags && post.data.tags.includes(filterTag)).slice(-10)
 
@@ -20,17 +20,16 @@ export default function AboutHome({posts}) {
 
     return (<Layout>
         <Head>
-            <title>About - {siteTitle}</title>
+            <title>Code and Development - {siteTitle}</title>
         </Head>
         <Grid fluid>
             {/* full row */}
             <Row className='contentContainer'>
                 <Col className='rowTitle' xs={24}>
-                    <h2>About</h2>
-                    <h4>Software Engineer / Musician / Photographer</h4>
+                    <h2>Code & Dev</h2>
+                    <h4>Python / Javascript / HTML & CSS / Emacs Elisp</h4>
                     <p>Page is in development. More posts coming soon.</p>
                 </Col>
-
                 <Row>
                     {/* send message if there are no posts */}
                     {posts.length < 1 ? ('There are no posts here yet. Thank you for your patience as I build out my website.') : ('')}

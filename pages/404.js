@@ -2,18 +2,23 @@
 
 import Head from 'next/head'
 import Layout from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import {Col, Grid, Row} from 'rsuite'
 
 export default function Custom404() {
-    return (
+    return (<>
+        <Head>
+            <title>PAGE NOT FOUND</title>
+        </Head>
         <Layout>
-            <Head>
-                <title>PAGE NOT FOUND</title>
-            </Head>
-            <section className={utilStyles.headingMd}>
-                <h1>404</h1>
-                <p>Page not found.</p>
-            </section>
+            <Grid fluid>
+                <Row className='contentContainer contentContainerCenter contentPanel' style={{textAlign: 'center'}}>
+                    <Col className='rowTitle' xs={24}>
+                        <h1>404</h1>
+                        <p>Page not found.</p>
+                    </Col>
+                </Row>
+            </Grid>
+
         </Layout>
-    )
+    </>)
 }
