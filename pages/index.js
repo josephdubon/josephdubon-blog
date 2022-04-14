@@ -35,7 +35,7 @@ export default function Home({posts}) {
                     <h4>Custom Software, Websites, Web Apps, SPA's, Consultations</h4>
                     <p>{' '}</p>
                     <p>I am currently accepting entries to my project queue.</p>
-                    <br/>
+                    <p>{' '}</p>
                     <a href='mailto:jd@josephdubon.com'>
                         <Button appearance='ghost'>jd@josephdubon.com</Button>
                     </a>
