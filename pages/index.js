@@ -27,10 +27,8 @@ export default function Home({posts}) {
                     <h2>Hello, my name is Joe!</h2>
                     <h4>I am a full-stack software engineer.</h4>
                     <p>I love to teach what I know and help anyone looking to get into coding or tech.</p>
-                    <br/>
-                    <p>I’m currently working remotely, for my own software company, building <br/>
-                        startups and diving into
-                        web3, blockchain development.</p>
+                    <p>{' '}</p>
+                    <p>I’m currently working remotely building startups and diving into web3/blockchain development.</p>
                 </Col>
                 <Col className='contentContainer contentContainerCenter rowAltColor' xs={24}>
                     <h2>Let's build something beautiful together.</h2>
