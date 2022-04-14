@@ -51,18 +51,36 @@ export default function Home({posts}) {
                     <p>Posts page is in development.</p>
                 </Col>
                 <Row className='contentContainer'>
-                    <Col xs={24} sm={12} md={8} lg={6}>
-                        <Card title='Cool Post Coming Soon 1'/>
-                    </Col>
-                    <Col xs={24} sm={12} md={8} lg={6}>
-                        <Card title='Cool Post Coming Soon 2'/>
-                    </Col>
-                    <Col xs={24} sm={12} md={8} lg={6}>
-                        <Card title='Cool Post Coming Soon 3'/>
-                    </Col>
-                    <Col xs={24} sm={12} md={8} lg={6}>
-                        <Card title='Cool Post Coming Soon 4'/>
-                    </Col>
+                    {/* send message if there are no posts */}
+                    {posts.length < 1 ? ('There are no posts here yet. Thank you for your patience as I build out my website.') : ('')}
+
+                    {/* loop through posts */}
+                    {posts.map((post) => {
+                        return (<>
+                            <Col className='contentContainerCenterRow' xs={24} sm={12} md={8} lg={6}>
+                                <Panel shaded bordered bodyFill className='postListCard'>
+                                    <Image src={post.data.thumbnailUrl} width='500' height='500'/>
+                                    <Panel header={<Link
+                                        as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
+                                        href={`/posts/[slug]`}
+                                    >
+                                        <a>{post.data.title}</a>
+                                    </Link>}>
+                                        <p>
+                                            <small>
+                                                {post.data.date}
+                                                <br/>
+                                                {post.data.tags.map(tag => tag + ' ')}
+                                                <br/>
+                                                <br/>
+                                                {post.data.description}
+                                            </small></p>
+                                    </Panel>
+                                </Panel>
+                                <br/>
+                            </Col>
+                        </>)
+                    })}
                 </Row>
             </Row>
         </Grid>
