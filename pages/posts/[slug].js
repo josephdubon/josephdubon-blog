@@ -3,6 +3,7 @@ import matter from 'gray-matter'
 import {serialize} from 'next-mdx-remote/serialize'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import Image from 'next/image'
 import path from 'path'
 import CustomLink from '../../components/CustomLink'
 import Layout from '../../components/Layout'
@@ -18,26 +19,31 @@ const components = {
     a: CustomLink, // It also works with dynamically-imported components, which is especially
     // useful for conditionally loading components for certain routes.
     // See the notes in README.md for more details.
-    TestComponent: dynamic(() => import('../../components/TestComponent')), Head,
+    Layout: dynamic(() => import('../../components/Layout')),
+    TestComponent: dynamic(() => import('../../components/TestComponent')),
+    Head,
+    Image
 }
 
 export default function PostPage({source, frontMatter}) {
-    return (<Layout>
-        <Grid fluid>
-            {/* post card */}
-            <Row className='contentContainer'>
-                <Col className='rowTitle' xs={24}>
-                    <h2>{frontMatter.title}</h2>
-                    <h4>{frontMatter.date}</h4>
-                    {frontMatter.description && (<p className='description'>{frontMatter.description}</p>)}
-                    <Divider/>
-                </Col>
-                <Col className='rowTitle' xs={24}>
-                    <MDXRemote {...source} components={components}/>
-                </Col>
-            </Row>
-        </Grid>
-    </Layout>)
+    return (<>
+        <Layout>
+            <Grid fluid>
+                {/* post card */}
+                <Row className='contentContainer'>
+                    <Col className='rowTitle' xs={24}>
+                        <h2>{frontMatter.title}</h2>
+                        <h4>{frontMatter.date}</h4>
+                        {frontMatter.description && (<p className='description'>{frontMatter.description}</p>)}
+                        <Divider/>
+                    </Col>
+                    <Col className='rowTitle' xs={24}>
+                        <MDXRemote {...source} components={components}/>
+                    </Col>
+                </Row>
+            </Grid>
+        </Layout>
+    </>)
 }
 
 export const getStaticProps = async ({params}) => {

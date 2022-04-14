@@ -1,7 +1,7 @@
 // custom 404 page
 
 import Head from 'next/head'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import {Col, Grid, Row} from 'rsuite'
 
 export default function Custom404() {

@@ -7,13 +7,11 @@ export default function FooterHome() {
             <Divider>thanks for visiting</Divider>
             <FlexboxGrid className='flexRowEvenly'>
                 <FlexboxGrid.Item colspan={6}>
-                    © {new Date().getFullYear()}
-                    <Link href='/'><a>
-                        {' '} Joseph Adonay Dubon
+                    <Link href='/'><a>JSPH/DBN
                     </a></Link>
                 </FlexboxGrid.Item>
                 <FlexboxGrid.Item colspan={6}>
-                    Built in Reno, NV with a lot of ❤️
+                    © {new Date().getFullYear()}
                 </FlexboxGrid.Item>
                 <FlexboxGrid.Item colspan={6}>
                     Philippians 4:6
