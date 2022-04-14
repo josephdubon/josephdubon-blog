@@ -9,8 +9,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {useState} from 'react'
 
-export default function AboutHome({allPostsData}, props) {
-    // use state
+export default function AboutHome({posts}) {
+    // set state
     const [open, setOpen] = useState(false)
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
