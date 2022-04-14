@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import path from 'path'
 import CustomLink from '../../components/CustomLink'
-import Layout from '../../components/Layout'
+import Layout from '../../components/layout'
 import {postFilePaths, POSTS_PATH} from '../../utils/mdxUtils'
 import {Col, Divider, Grid, Row} from 'rsuite'
 import {MDXRemote} from 'next-mdx-remote'
@@ -22,22 +22,24 @@ const components = {
 }
 
 export default function PostPage({source, frontMatter}) {
-    return (<Layout>
-        <Grid fluid>
-            {/* post card */}
-            <Row className='contentContainer'>
-                <Col className='rowTitle' xs={24}>
-                    <h2>{frontMatter.title}</h2>
-                    <h4>{frontMatter.date}</h4>
-                    {frontMatter.description && (<p className='description'>{frontMatter.description}</p>)}
-                    <Divider/>
-                </Col>
-                <Col className='rowTitle' xs={24}>
-                    <MDXRemote {...source} components={components}/>
-                </Col>
-            </Row>
-        </Grid>
-    </Layout>)
+    return (<>
+        <Layout>
+            <Grid fluid>
+                {/* post card */}
+                <Row className='contentContainer'>
+                    <Col className='rowTitle' xs={24}>
+                        <h2>{frontMatter.title}</h2>
+                        <h4>{frontMatter.date}</h4>
+                        {frontMatter.description && (<p className='description'>{frontMatter.description}</p>)}
+                        <Divider/>
+                    </Col>
+                    <Col className='rowTitle' xs={24}>
+                        <MDXRemote {...source} components={components}/>
+                    </Col>
+                </Row>
+            </Grid>
+        </Layout>
+    </>)
 }
 
 export const getStaticProps = async ({params}) => {
