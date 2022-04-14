@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {Button, Col, Grid, List, Modal, Panel, Row} from 'rsuite'
+import {Col, Grid, Panel, Row} from 'rsuite'
 import Layout, {siteTitle} from '../components/layout'
 import fs from 'fs'
 import path from 'path'
@@ -7,14 +7,8 @@ import {postFilePaths, POSTS_PATH} from '../utils/mdxUtils'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import Image from 'next/image'
-import {useState} from 'react'
 
 export default function AboutHome({posts}) {
-    // set state
-    const [open, setOpen] = useState(false)
-    const handleOpen = () => setOpen(true)
-    const handleClose = () => setOpen(false)
-
     // filter tag
     const filterTag = 'about me'
     // filter out posts
@@ -34,13 +28,10 @@ export default function AboutHome({posts}) {
                 <Col className='rowTitle' xs={24}>
                     <h2>About</h2>
                     <h4>Software Engineer / Musician / Photographer</h4>
-                    <p>Code examples page is in development.</p>
+                    <p>Page is in development. More posts coming soon.</p>
                     <br/>
-                    <Link href='#'>
-                        <a onClick={handleOpen}> Contact Card</a>
-                    </Link>
                 </Col>
-                {/* Section  - modal - button */}
+
                 <Row>
                     {/* send message if there are no posts */}
                     {posts.length < 1 ? ('There are no posts here yet. Thank you for your patience as I build out my website.') : ('')}
@@ -71,29 +62,6 @@ export default function AboutHome({posts}) {
                 </Row>
             </Row>
         </Grid>
-        <Row className='modal-container'>
-            {/* Section - modal - content */}
-            <Modal open={open} onClose={handleClose}>
-                <Modal.Header>
-                    <Modal.Title>Contact Card</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <List bordered hover>
-                        <List.Item>Name: Joseph Dubon</List.Item>
-                        <List.Item>Title: Full-Stack Software Engineer</List.Item>
-                        <List.Item>Email: <a
-                            href='mailto:jd@josephdubon.com'>jd@josephdubon.com</a></List.Item>
-                        <List.Item>Phone: <a
-                            href='tel:(775)232-6280'>(775)232-6280</a></List.Item>
-                    </List>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button onClick={handleClose} appearance='primary'>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </Row>
     </Layout>)
 }
 
