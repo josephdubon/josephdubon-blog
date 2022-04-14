@@ -3,6 +3,7 @@ import matter from 'gray-matter'
 import {serialize} from 'next-mdx-remote/serialize'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import Image from 'next/image'
 import path from 'path'
 import CustomLink from '../../components/CustomLink'
 import Layout from '../../components/Layout'
@@ -20,7 +21,8 @@ const components = {
     // See the notes in README.md for more details.
     Layout: dynamic(() => import('../../components/Layout')),
     TestComponent: dynamic(() => import('../../components/TestComponent')),
-    Head
+    Head,
+    Image
 }
 
 export default function PostPage({source, frontMatter}) {
