@@ -14,17 +14,13 @@ export default function AboutHome({allPostsData}, props) {
         <Head>
             <title>About - {siteTitle}</title>
         </Head>
-
-        <FlexboxGrid justify='center'>
-            {/* Section - hello */}
-            <FlexboxGrid.Item colspan={20}>
-                <Row className='rowTitle'>
-                    <h2>About Me</h2>
-                    <h4>I am a full-stack software engineer</h4>
-                    <small>BUILD THE WEB. SECURE THE FUTURE. CAPTURE TODAY, SO WE WILL NOT FORGET
-                        TOMORROW.
-                    </small>
-                    <br/>
+        <Grid fluid>
+            {/* full row */}
+            <Row className='contentContainer'>
+                <Col className='rowTitle' xs={24}>
+                    <h2>About</h2>
+                    <h4>Software Engineer / Musician / Photographer</h4>
+                    <p>Code examples page is in development.</p>
                     <br/>
                     <Link href='#'>
                         <a onClick={handleOpen}> Contact Card</a>
