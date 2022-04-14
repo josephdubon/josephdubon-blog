@@ -33,6 +33,7 @@ export default function Home({posts}) {
                 <Col className='contentPanel contentContainerCenter rowTitle rowAltColor' xs={24}>
                     <h2>Let's build something beautiful together.</h2>
                     <h4>Custom Software, Websites, Web Apps, SPA's, Consultations</h4>
+                    <p>{' '}</p>
                     <p>I am currently accepting entries to my project queue.</p>
                     <br/>
                     <a href='mailto:jd@josephdubon.com'>
