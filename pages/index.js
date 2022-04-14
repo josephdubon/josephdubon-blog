@@ -41,7 +41,7 @@ export default function Home({posts}) {
                     </a>
                     <br/>
                 </Col>
-            </Row>
+            </Col>
 
             {/* full row */}
             <Row>
