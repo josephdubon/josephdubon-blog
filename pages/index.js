@@ -1,7 +1,16 @@
 import Head from 'next/head'
-import {Button, Col, Grid, Row} from 'rsuite'
+import {Button, Col, Grid, Panel, Row} from 'rsuite'
 import Layout, {siteTitle} from '../components/layout'
-import Card from '../components/card'
+import fs from 'fs'
+import path from 'path'
+import {postFilePaths, POSTS_PATH} from '../utils/mdxUtils'
+import matter from 'gray-matter'
+import Link from 'next/link'
+import Image from 'next/image'
+
+export default function Home({posts}) {
+    // filter last ten posts
+    posts = posts.slice(-8)
 
 export default function Home() {
     return (<Layout home>
