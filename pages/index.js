@@ -39,9 +39,7 @@ export default function Home({posts}) {
                     <a href='mailto:jd@josephdubon.com'>
                         <Button appearance='ghost'>jd@josephdubon.com</Button>
                     </a>
-
                     <br/>
-
                 </Col>
             </Row>
 
