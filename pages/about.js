@@ -10,7 +10,16 @@ export default function AboutHome({allPostsData}, props) {
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
 
-    return (<Layout home>
+    // filter tag
+    const filterTag = 'about me'
+    // filter out posts
+    posts = posts.filter(post => post.data.tags && post.data.tags.includes(filterTag)).slice(-10)
+
+    posts = posts.sort(function (a, b) {
+        return a - b // returns newest to oldest;change to a + b and returns oldest to newest
+    })
+
+    return (<Layout>
         <Head>
             <title>About - {siteTitle}</title>
         </Head>
