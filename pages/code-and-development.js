@@ -30,13 +30,12 @@ export default function Home({posts}) {
                     <h4>Python / Javascript / HTML & CSS / Emacs Elisp</h4>
                     <p>Page is in development. More posts coming soon.</p>
                 </Col>
-                <Row>
-                    {/* send message if there are no posts */}
-                    {posts.length < 1 ? ('There are no posts here yet. Thank you for your patience as I build out my website.') : ('')}
+                {/* send message if there are no posts */}
+                {posts.length < 1 ? ('There are no posts here yet. Thank you for your patience as I build out my website.') : ('')}
 
-                    {/* loop through posts */}
-                    {posts.map((post) => {
-                        return (<>
+                {/* loop through posts */}
+                {posts.map((post, index) => {
+                    return (<span key={index}>
                             <Col className='contentContainerCenterRow' xs={24} sm={12} md={8} lg={6}>
                                 <Panel shaded bordered bodyFill className='postListCard'>
                                     <Image src={post.data.thumbnailUrl} width='500' height='500'/>
@@ -55,9 +54,8 @@ export default function Home({posts}) {
                                     </Panel>
                                 </Panel>
                             </Col>
-                        </>)
-                    })}
-                </Row>
+                        </span>)
+                })}
             </Row>
         </Grid>
     </Layout>)

@@ -36,8 +36,8 @@ export default function AboutHome({posts}) {
                     {posts.length < 1 ? ('There are no posts here yet. Thank you for your patience as I build out my website.') : ('')}
 
                     {/* loop through posts */}
-                    {posts.map((post) => {
-                        return (<>
+                    {posts.map((post, index) => {
+                        return (<span key={index}>
                             <Col className='contentContainerCenterRow' xs={24} sm={12} md={8} lg={6}>
                                 <Panel shaded bordered bodyFill className='postListCard'>
                                     <Image src={post.data.thumbnailUrl} width='500' height='500'/>
@@ -56,7 +56,7 @@ export default function AboutHome({posts}) {
                                     </Panel>
                                 </Panel>
                             </Col>
-                        </>)
+                        </span>)
                     })}
                 </Row>
             </Row>

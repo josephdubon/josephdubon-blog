@@ -30,34 +30,32 @@ export default function Home({posts}) {
                     <h4>Custom Software / Web Apps / Websites</h4>
                     <p>Page is in development. More posts coming soon.</p>
                 </Col>
-                <Row>
-                    {/* send message if there are no posts */}
-                    {posts.length < 1 ? ('There are no posts here yet. Thank you for your patience as I build out my website.') : ('')}
+                {/* send message if there are no posts */}
+                {posts.length < 1 ? ('There are no posts here yet. Thank you for your patience as I build out my website.') : ('')}
 
-                    {/* loop through posts */}
-                    {posts.map((post) => {
-                        return (<>
-                            <Col className='contentContainerCenterRow' xs={24} sm={12} md={8} lg={6}>
-                                <Panel shaded bordered bodyFill className='postListCard'>
-                                    <Image src={post.data.thumbnailUrl} width='500' height='500'/>
-                                    <Panel header={<Link
-                                        as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
-                                        href={`/posts/[slug]`}
-                                    >
-                                        <a>{post.data.title}</a>
-                                    </Link>}>
-                                        <small>{post.data.tags.map(tag => tag + ' ')}</small>
-                                        <p><small>
-                                            {post.data.date}
-                                            <br/>
-                                            {post.data.description}
-                                        </small></p>
-                                    </Panel>
+                {/* loop through posts */}
+                {posts.map((post, index) => {
+                    return (<span key={index}>
+                        <Col className='contentContainerCenterRow' xs={24} sm={12} md={8} lg={6}>
+                            <Panel shaded bordered bodyFill className='postListCard'>
+                                <Image src={post.data.thumbnailUrl} width='500' height='500'/>
+                                <Panel header={<Link
+                                    as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
+                                    href={`/posts/[slug]`}
+                                >
+                                    <a>{post.data.title}</a>
+                                </Link>}>
+                                    <small>{post.data.tags.map(tag => tag + ' ')}</small>
+                                    <p><small>
+                                        {post.data.date}
+                                        <br/>
+                                        {post.data.description}
+                                    </small></p>
                                 </Panel>
-                            </Col>
-                        </>)
-                    })}
-                </Row>
+                            </Panel>
+                        </Col>
+                    </span>)
+                })}
             </Row>
         </Grid>
     </Layout>)
