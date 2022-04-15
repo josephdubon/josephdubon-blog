@@ -13,22 +13,10 @@
 .contentContainer {
     max-width: var(--wrapper-width);
     margin: 0 auto;
-    padding: 2.5rem;
 }
 
-.contentContainerCenter {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.contentContainerCenterRow {
-    justify-content: center;
-}
-
-.contentPanel {
-    min-height: 60vh;
+.centerText {
+    text-align: center;
 }
 
 .mainNav {
@@ -36,7 +24,6 @@
     margin: 0 auto;
 }
 
-/* rows */
 .rowTitle {
     margin: 2.5rem 0;
 }
@@ -51,6 +38,18 @@
 .rowAltColor {
     background: var(--alt-bg-color);
     color: #e8ebf0;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.homePanel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
 }
 
 .backToHome {
