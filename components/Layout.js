@@ -4,7 +4,7 @@ import Footer from './Footer'
 import {Container, Content, Header} from 'rsuite'
 
 const name = 'Joseph Dubon'
-export const siteTitle = name + 'Full-Stack Software Engineer'
+export const siteTitle = name + ' ' + 'Full-Stack Software Engineer'
 
 export default function Layout({children}) {
     return (<>
