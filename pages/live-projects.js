@@ -27,7 +27,7 @@ export default function Home({posts}) {
             <Row className='contentContainer'>
                 <Col className='rowTitle' xs={24}>
                     <h2>Live Projects</h2>
-                    <h4>Custom Software / Web Apps / Websites</h4>
+                    <h4>Custom Software | Web Apps | Websites</h4>
                     <p>Page is in development. More posts coming soon.</p>
                 </Col>
                 {/* send message if there are no posts */}
@@ -36,7 +36,7 @@ export default function Home({posts}) {
                 {/* loop through posts */}
                 {posts.map((post, index) => {
                     return (<span key={index}>
-                        <Col className='contentContainerCenterRow' xs={24} sm={12} md={8} lg={6}>
+                        <Col className='centerFlex' xs={24} sm={12} md={8} lg={6}>
                             <Panel shaded bordered bodyFill className='postListCard'>
                                 <Image src={post.data.thumbnailUrl} width='500' height='500'/>
                                 <Panel header={<Link
@@ -45,7 +45,7 @@ export default function Home({posts}) {
                                 >
                                     <a>{post.data.title}</a>
                                 </Link>}>
-                                    <small>{post.data.tags.map(tag => tag + ' ')}</small>
+                                    
                                     <p><small>
                                         {post.data.date}
                                         <br/>
