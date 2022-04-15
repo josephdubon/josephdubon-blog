@@ -8,11 +8,11 @@ import matter from 'gray-matter'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Home({posts}) {
+export default function PostsHome({posts}) {
     // filter tag
-    const filterTag = 'art'
+    const filterTag = 'about me'
     // filter out posts
-    posts = posts.filter(post => post.data.tags && post.data.tags.includes(filterTag)).slice(-10)
+    posts = posts.filter(post => post.data.tags && post.data.tags.includes(filterTag))
 
     posts = posts.sort(function (a, b) {
         return a - b // returns newest to oldest;change to a + b and returns oldest to newest
@@ -20,24 +20,24 @@ export default function Home({posts}) {
 
     return (<Layout>
         <Head>
-            <title>Art - {siteTitle}</title>
+            <title>Posts - {siteTitle}</title>
         </Head>
         <Grid fluid>
             {/* full row */}
             <Row className='contentContainer'>
                 <Col className='rowTitle' xs={24}>
-                    <h2>Art</h2>
-                    <h4>Music | Movies | Photo</h4>
+                    <h2>Posts</h2>
+                    <h4>Life | Thoughts | Writings</h4>
                     <p>Page is in development. More posts coming soon.</p>
                 </Col>
-                <Row>
-                    {/* send message if there are no posts */}
-                    {posts.length < 1 ? ('There are no posts here yet. Thank you for your patience as I build out my website.') : ('')}
 
-                    {/* loop through posts */}
-                    {posts.map((post) => {
-                        return (<>
-                            <Col xs={24} sm={12} md={8} lg={6}>
+                {/* send message if there are no posts */}
+                {posts.length < 1 ? ('There are no posts here yet. Thank you for your patience as I build out my website.') : ('')}
+
+                {/* loop through posts */}
+                {posts.map((post, index) => {
+                    return (<span key={index}>
+                            <Col className='centerFlex' xs={24} sm={12} md={8} lg={6}>
                                 <Panel shaded bordered bodyFill className='postListCard'>
                                     <Image src={post.data.thumbnailUrl} width='500' height='500'/>
                                     <Panel header={<Link
@@ -46,7 +46,7 @@ export default function Home({posts}) {
                                     >
                                         <a>{post.data.title}</a>
                                     </Link>}>
-
+                                        
                                         <p><small>
                                             {post.data.date}
                                             <br/>
@@ -55,9 +55,8 @@ export default function Home({posts}) {
                                     </Panel>
                                 </Panel>
                             </Col>
-                        </>)
-                    })}
-                </Row>
+                        </span>)
+                })}
             </Row>
         </Grid>
     </Layout>)

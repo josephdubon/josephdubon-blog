@@ -31,6 +31,10 @@ export default function NavBarInstance() {
                         About
                     </Nav.Item>
 
+                    <Nav.Item as={NavLink} href='/posts'>
+                        Posts
+                    </Nav.Item>
+
                     <Nav.Item as={NavLink} href='/code-and-development'>
                         Code & Dev
                     </Nav.Item>
