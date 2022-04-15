@@ -11,7 +11,7 @@ export default function Custom404() {
         </Head>
         <Layout>
             <Grid fluid>
-                <Row className='contentContainer contentContainerCenter contentPanel' style={{textAlign: 'center'}}>
+                <Row className='contentContainer centerText ' style={{textAlign: 'center'}}>
                     <Col className='rowTitle' xs={24}>
                         <h1>404</h1>
                         <p>Page not found.</p>
