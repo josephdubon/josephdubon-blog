@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 export default function PostsHome({posts}) {
     // filter tag
-    const filterTag = 'about me'
+    const filterTag = 'published'
     // filter out posts
     posts = posts.filter(post => post.data.tags && post.data.tags.includes(filterTag))
 
