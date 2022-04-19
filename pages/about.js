@@ -27,7 +27,7 @@ export default function AboutHome({posts}) {
             <Row className='contentContainer'>
                 <Col className='rowTitle' xs={24}>
                     <h2>About</h2>
-                    <h4>Software Engineer | Musician | Photographer</h4>
+                    <h4>Software Developer | Artist | Educator</h4>
                     <p>Page is in development. More posts coming soon.</p>
                 </Col>
 

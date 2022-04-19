@@ -28,7 +28,7 @@ export default function IndexHome({posts}) {
                 <Col className='rowTitle centerText' xs={24}>
 
                     <h2>Hello, my name is Joe!</h2>
-                    <h4>I am a software developer, photographer, and educator.</h4>
+                    <h4>I am a software developer, artist, and educator.</h4>
                     <br/>
                     <p>I build most my projects with a mix of Node, NextJS, Python, Django, and AWS.</p>
                     <p>I’m currently working remotely building startups and diving into web3/blockchain.</p>
