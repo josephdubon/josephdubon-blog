@@ -30,8 +30,8 @@ export default function IndexHome({posts}) {
                     <h2>Hello, my name is Joe!</h2>
                     <h4>I am a software developer, photographer, and educator.</h4>
                     <br/>
-                    <p>I'm building most my projects with NodeJS, NextJS, MongoDB, and AWS.</p>
-                    <p>I’m currently working remotely building startups, on the Americoders project, and diving into web3.</p>
+                    <p>I build most my projects with a mix of Node, NextJS, Python, Django, and AWS.</p>
+                    <p>I’m currently working remotely building startups and diving into web3/blockchain.</p>
                     <br/>
                 </Col>
             </Row>
@@ -39,10 +39,13 @@ export default function IndexHome({posts}) {
                 <Col className='rowAltColor homePanel'>
                     <Col className='rowTitle centerText' xs={24}>
                         <h2>Let's build something beautiful together.</h2>
-                        <h4>I make websites, web apps, and custom software built with modern technologies</h4>
+                        <h4>I design, structure, and build my projects with modern technologies.</h4>
                         <br/>
                         <br/>
                         <p>I am currently accepting entries to my project queue.</p>
+                        Send me a message and introduce to <strong>yourself</strong> + your <strong>potential
+                        project</strong>!
+                        <br/>
                         <br/>
                         <a href='mailto:jd@josephdubon.com'>
                             <Button appearance='ghost'>jd@josephdubon.com</Button>
@@ -55,7 +58,9 @@ export default function IndexHome({posts}) {
             <Row className='contentContainer'>
                 <Col className='rowTitle centerText' xs={24}>
                     <h2>Recent Posts</h2>
-                    <h4>You Can't Put Your Arms Around A Memory</h4>
+                    <p>You Can't Put Your Arms Around
+                        <br/>
+                        A Random-Access-Memory </p>
                     <br/>
                 </Col>
 
