@@ -28,11 +28,10 @@ export default function IndexHome({posts}) {
                 <Col className='rowTitle centerText' xs={24}>
 
                     <h2>Hello, my name is Joe!</h2>
-                    <h4>I am a full-stack software engineer.</h4>
+                    <h4>I am a software developer, photographer, and educator.</h4>
                     <br/>
-                    <p>I love to teach what I know and help anyone looking to get into coding or tech.</p>
-                    <p>I’m currently working remotely building startups and diving into web3/blockchain
-                        development.</p>
+                    <p>I'm building most my projects with NodeJS, NextJS, MongoDB, and AWS.</p>
+                    <p>I’m currently working remotely building startups, on the Americoders project, and diving into web3.</p>
                     <br/>
                 </Col>
             </Row>
@@ -40,7 +39,7 @@ export default function IndexHome({posts}) {
                 <Col className='rowAltColor homePanel'>
                     <Col className='rowTitle centerText' xs={24}>
                         <h2>Let's build something beautiful together.</h2>
-                        <h4>Software Engineering | Web Development | Modern Technologies</h4>
+                        <h4>I make websites, web apps, and custom software built with modern technologies</h4>
                         <br/>
                         <br/>
                         <p>I am currently accepting entries to my project queue.</p>
