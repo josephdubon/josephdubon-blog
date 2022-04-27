@@ -54,8 +54,8 @@ export default function NavBarInstance() {
                     <Nav.Item href='https://github.com/josephdubon'>
                         GitHub
                     </Nav.Item>
-                    <Nav.Item href='https://www.linkedin.com/in/joseph-dubon/'>
-                        LinkedIn
+                    <Nav.Item href='https://americoders.org'>
+                        Americoders
                     </Nav.Item>
                 </Nav>
             </section>
