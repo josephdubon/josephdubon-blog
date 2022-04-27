@@ -15,7 +15,7 @@ export default function PostsHome({posts}) {
     posts = posts.filter(post => post.data.tags && post.data.tags.includes(filterTag))
 
     posts = posts.sort(function (a, b) {
-        return a - b // returns newest to oldest;change to a + b and returns oldest to newest
+        return a + b // returns newest to oldest; change to a - b and returns oldest to newest
     })
 
     return (<Layout>
