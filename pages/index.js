@@ -27,11 +27,11 @@ export default function IndexHome({posts}) {
             <Row className=' homePanel'>
                 <Col className='rowTitle centerText' xs={24}>
 
-                    <h2>Hello, my name is Joe!</h2>
-                    <h4>I am a software developer, artist, and educator.</h4>
+                    <h2>Hello, my name is Joseph Dubon!</h2>
+                    <h4>I am a software engineer, artist, and educator.</h4>
                     <br/>
-                    <p>I build most my projects with a mix of Node, NextJS, Python, Django, and AWS.</p>
                     <p>I’m currently working remotely building startups and diving into web3/blockchain.</p>
+                    <p>I love to work with functional and object-oriented programming languages.</p>
                     <br/>
                 </Col>
             </Row>
@@ -41,8 +41,7 @@ export default function IndexHome({posts}) {
                         <h2>Let's build something beautiful together.</h2>
                         <h4>I design, structure, and build my projects with modern technologies.</h4>
                         <br/>
-                        <br/>
-                        <p>I am currently accepting entries to my project queue.</p>
+                        <p>I am currently NOT accepting entries to my project queue.</p>
                         Send me a message and introduce to <strong>yourself</strong> + your <strong>potential
                         project</strong>!
                         <br/>
