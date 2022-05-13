@@ -72,8 +72,7 @@ export default function NavBarInstance() {
                     <List.Item>Title: Full-Stack Software Engineer</List.Item>
                     <List.Item>Email: <a
                         href='mailto:jd@josephdubon.com'>jd@josephdubon.com</a></List.Item>
-                    <List.Item>Phone: <a
-                        href='tel:(775)232-6280'>(775)232-6280</a></List.Item>
+                    <List.Item>Company: <a href='https://americoders.org'>Americoders, LLC</a></List.Item>
                 </List>
             </Modal.Body>
             <Modal.Footer>
